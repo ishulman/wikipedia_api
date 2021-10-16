@@ -1,5 +1,3 @@
-
-
 import requests
 from requests.models import parse_url
 import datadog
@@ -34,8 +32,8 @@ for l in languages:
     statsd.histogram('wiki.views_yesterday', views_yesterday, tags=[l])
 
 for a in access:
-    views_yesterday = get_wiki_stats_l(a)
-    print(views_yesterday)
-    statsd.histogram('wiki.views_yesterday_access', views_yesterday, tags=[a])
+    views_yesterday_access = get_wiki_stats_a(a)
+    print(views_yesterday_access)
+    statsd.histogram('wiki.views_yesterday_access', views_yesterday_access, tags=[a])
 
 
