@@ -20,7 +20,7 @@ def get_wiki_stats_l(lang):
     return data['items'][0]['views']
 
 def get_wiki_stats_a(access):
-    api_url = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/"+ access + "/all-agents/Datadog/daily/" + str(yesterday) + "/" + str(yesterday)
+    api_url = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/"+ access + "/all-agents/Datadog/monthly/" + str(yesterday) + "/" + str(yesterday)
     hdr = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(api_url, headers=hdr)
     data = response.json()
@@ -35,5 +35,3 @@ for a in access:
     views_yesterday_access = get_wiki_stats_a(a)
     print(views_yesterday_access)
     statsd.histogram('wiki.views_yesterday_access', views_yesterday_access, tags=[a])
-
-
