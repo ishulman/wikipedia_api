@@ -1,0 +1,104 @@
+{
+  "title": "The Long Afternoon",
+  "number": 1,
+  "date": "Sunday 25 October 2026",
+  "articles": [
+    {
+      "id": "amalfi-drive",
+      "section": "Travel",
+      "title": "The Road That Hangs Over the Sea",
+      "standfirst": "Fifty kilometres of bends above the Tyrrhenian. The trick is to arrive without a schedule.",
+      "body": [
+        "The SS163, known as the Amalfitana, clings to the cliffs of the Sorrentine Peninsula for roughly fifty kilometres and stitches together Positano, Praiano, Amalfi and Atrani. It was cut into the rock in the first half of the nineteenth century, and the coast it opened has been on UNESCO's World Heritage list since 1997.",
+        "October is the month to go. The coach parties thin out, the sea is still warm enough for a swim, and the light turns lower and more golden by late afternoon. Many hotels start closing for the winter in November, so the window is short, which is part of its charm.",
+        "Drive it only if you like driving. The road is narrow, buses take the outside of the bends, and the correct response is to wait. Everyone else is better served by the SITA buses or by the ferries that link the towns, which show you the coast the way its sea traders saw it.",
+        "Better still, walk a part of it. The Sentiero degli Dei, the Path of the Gods, follows the ridge high above the road from Bomerano to Nocelle in about three to four hours, with the whole coast laid out below.",
+        "Pick one town, one table and one long lunch. A coast this steep is a poor place to be in a hurry."
+      ],
+      "source": {"name": "Amalfi Coast, Wikipedia", "url": "https://en.wikipedia.org/wiki/Amalfi_Coast"},
+      "image": {
+        "file": "amalfi.jpg",
+        "alt": "A coastal road curving above terraced hillsides and a blue bay on the Amalfi Coast",
+        "pos": "50% 40%",
+        "credit": "Tracey Hind, CC BY-SA 2.0",
+        "page": "https://commons.wikimedia.org/wiki/File:Detailed_shot_of_Amalfi_Coast_scenery_-_windy_road,_steep_cliffs,_terraced_crops_etc..._(52786423094).jpg"
+      },
+      "options": {"more": ["More of this region", "More walking, less driving", "More like this writer"]}
+    },
+    {
+      "id": "lancia-aurelia",
+      "section": "Cars",
+      "title": "The Lancia That Did Everything Quietly",
+      "standfirst": "In 1950 a Turin family firm built the first production V6 and wrapped it in some of the most graceful sheet metal of the decade.",
+      "body": [
+        "Gianni Lancia wanted a car that was engineered first and styled second, and the Aurelia, launched in 1950, delivered on both. Under the long bonnet sat a 60-degree V6, the first of its kind in series production, developed by a team led by Vittorio Jano, who had made his name at Alfa Romeo, together with Francesco de Virgilia.",
+        "The layout was just as unorthodox. The gearbox sat at the rear, combined with the clutch in a transaxle, which improved the weight distribution, and the rear brakes were mounted inboard. The B20 GT coupé, with bodywork by Pininfarina, arrived in 1951 and is often described as a template for the postwar grand tourer.",
+        "It was quick as well. At the 1951 Mille Miglia, Giovanni Bracco and Alberto Maggi finished second overall in a B20, behind Luigi Villoresi's much larger Ferrari.",
+        "In 1962 the model found a second kind of fame. In Dino Risi's film Il Sorpasso, Vittorio Gassman drives an Aurelia B24 Spider flat out down the Italian coast, and the car became a symbol of Italian summer abandon.",
+        "Nothing about an Aurelia is loud. That may be why it has aged so well."
+      ],
+      "source": {"name": "Lancia Aurelia, Wikipedia", "url": "https://en.wikipedia.org/wiki/Lancia_Aurelia"},
+      "image": {
+        "file": "lancia.jpg",
+        "alt": "A dark blue 1953 Lancia Aurelia B20 GT coupé parked on grass",
+        "pos": "50% 62%",
+        "credit": "MrWalkr, CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:1953_Lancia_Aurelia_B20_GT_SP25.jpg"
+      },
+      "options": {"more": ["More Italian classics", "More engineering history", "More car films"]}
+    },
+    {
+      "id": "leigh-fermor",
+      "section": "Literature",
+      "title": "Walking to Constantinople",
+      "standfirst": "At eighteen, Patrick Leigh Fermor set out from the Hook of Holland with a rucksack and a plan. It took him four decades to finish telling it.",
+      "body": [
+        "In December 1933, Patrick Leigh Fermor crossed to the Hook of Holland with a rucksack, a few books and the intention of walking to Constantinople. He was eighteen, recently expelled from school, and living on a small allowance. He reached the city at the start of 1935.",
+        "He wrote it down much later. A Time of Gifts (1977) takes him from Holland up the Rhine and down the Danube as far as Hungary. Between the Woods and the Water (1986) carries on across the Danube to the Iron Gates. A third volume, The Broken Road, was assembled from drafts and published after his death in 2011.",
+        "Why read it now? Because the prose moves at walking pace. He sleeps in barns and castles, learns a village's history from its priest, and treats every detour as the point. It is one of the least hurried books in English, and one of the most exact about what the eye picks up when you have no deadline.",
+        "Start with the opening chapters in Holland, in winter. Within five pages you will know whether to keep going."
+      ],
+      "source": {"name": "A Time of Gifts, Wikipedia", "url": "https://en.wikipedia.org/wiki/A_Time_of_Gifts"},
+      "image": {
+        "file": "danube.jpg",
+        "alt": "Aerial view of the Danube winding between wooded hills in Hungary",
+        "pos": "50% 50%",
+        "credit": "Bjoertvedt, CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:Hungary_donau_Visegrad_bend_IMG_0184.JPG"
+      },
+      "options": {"more": ["More travel writing", "More classics I may have missed", "More like this writer"]}
+    },
+    {
+      "id": "vienna-coffeehouse",
+      "section": "Slow living",
+      "title": "The Right to Stay Seated",
+      "standfirst": "Vienna's coffeehouses sell coffee, but the real product is a table you may keep for as long as you like.",
+      "body": [
+        "In 2011 UNESCO added Viennese coffee house culture to its list of intangible cultural heritage, which tells you the institution is taken seriously. Cafés such as Central, which opened in 1876, and Sperl, from 1880, still run on an old understanding: you pay for the coffee once and the table is yours for the afternoon.",
+        "A glass of water arrives with the cup and is refilled without being asked. Newspapers hang from wooden holders. The waiter, often in a black jacket and bow tie, will not bring the bill until you ask for it, because bringing it would suggest that you ought to leave.",
+        "Order by temperament. A Melange, espresso with steamed milk, is the default. An Einspänner is strong black coffee under whipped cream, served in a glass. A Kleiner Brauner is a short espresso with a splash of milk.",
+        "Go on a weekday in the late morning, take a window table and bring a book. Give yourself two hours. The Sperl, with its billiard tables and parquet floor, is a good place to practise the old idea that an afternoon with nothing in it is an afternoon well spent."
+      ],
+      "source": {"name": "Viennese coffee house culture, Wikipedia", "url": "https://en.wikipedia.org/wiki/Viennese_coffee_house_culture"},
+      "image": {
+        "file": "sperl.jpg",
+        "alt": "The gilded lettering on the glass door of Café Sperl in Vienna, with a waiter in a bow tie beside it",
+        "pos": "50% 50%",
+        "credit": "WOKRIE, CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:Cafe_Sperl-2625.jpg"
+      },
+      "options": {"more": ["More cafés and restaurants", "More Central Europe", "More rituals and etiquette"]}
+    }
+  ],
+  "notebook": [
+    {"label": "The extra hour", "text": "Clocks went back across Europe this morning. If you are reading this at breakfast, you have one hour more than yesterday. Spend it on something without a screen."},
+    {"label": "A word", "text": "Sprezzatura. Baldassare Castiglione's term, from The Book of the Courtier (1528), for making difficult things look effortless. It is the opposite of showing off."},
+    {"label": "On this day", "text": "Pablo Picasso was born in Málaga on 25 October 1881."}
+  ],
+  "sources_on_trial": [
+    {"id": "classic-driver", "name": "Classic Driver Magazine", "url": "https://www.classicdriver.com/en/magazine", "why": "Long features on single models and the people who restore them."},
+    {"id": "paris-review-daily", "name": "The Paris Review Daily", "url": "https://www.theparisreview.org/blog", "why": "Essays, short fiction and archive interviews with writers."},
+    {"id": "cereal", "name": "Cereal", "url": "https://readcereal.com", "why": "Quiet, photographic writing on travel, design and slow living."},
+    {"id": "monocle", "name": "Monocle", "url": "https://monocle.com", "why": "Hotels, cities and design with a gentleman's eye. Partly paywalled."}
+  ]
+}

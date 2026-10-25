@@ -1,0 +1,296 @@
+<title>The Long Afternoon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap">
+<style>
+/* Layout: one finite column, like a phone-sized magazine. Cover, contents, four features with full-bleed photographs, a notebook page, sources on trial, an end mark. */
+:root {
+  --paper: #E8EBE6;
+  --paper-2: #DDE2DC;
+  --ink: #15211B;
+  --muted: #55645C;
+  --rule: #BCC5BD;
+  --accent: #7A5A1E;
+  --on-photo: #FFFFFF;
+  --scrim: rgba(10, 18, 14, 0.78);
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --label: "Jost", "Avenir Next", "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0D1410; --paper-2: #16201A; --ink: #E6E9E2; --muted: #9AA89F;
+    --rule: #2B3832; --accent: #CBA866; --scrim: rgba(5, 9, 7, 0.82); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0D1410; --paper-2: #16201A; --ink: #E6E9E2; --muted: #9AA89F;
+  --rule: #2B3832; --accent: #CBA866; --scrim: rgba(5, 9, 7, 0.82); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 18px; line-height: 1.65;
+  padding-left: max(0px, env(safe-area-inset-left, 0px));
+  padding-right: max(0px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin-inline: auto; }
+.gutter {
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.label {
+  font-family: var(--label); font-weight: 500; font-size: 11.5px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Masthead */
+.masthead { padding-block: 28px 18px; text-align: left; border-bottom: 1px solid var(--rule); }
+.masthead h1 {
+  font-family: var(--display); font-weight: 500; text-transform: uppercase;
+  font-size: clamp(40px, 12.5vw, 76px); line-height: 0.92; letter-spacing: 0.02em; margin: 14px 0 0;
+}
+.masthead h1 em { font-style: italic; text-transform: none; color: var(--accent); letter-spacing: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; justify-content: space-between; }
+
+/* Cover */
+.cover { position: relative; margin-top: 0; }
+.cover figure { margin: 0; }
+.cover img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.cover .scrim {
+  position: absolute; inset: auto 0 0 0; padding-block: 120px 26px;
+  background: linear-gradient(to top, var(--scrim) 8%, transparent);
+  color: var(--on-photo);
+}
+.cover .kicker { font-family: var(--label); font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; opacity: 0.9; }
+.cover h2 { font-family: var(--display); font-weight: 500; font-size: clamp(38px, 11vw, 64px); line-height: 1; margin: 10px 0 12px; text-wrap: balance; }
+.cover p { margin: 0; font-style: italic; font-size: 18px; line-height: 1.45; max-width: 34ch; opacity: 0.95; }
+.cover .begin { display: inline-block; margin-top: 16px; font-family: var(--label); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.credit { font-family: var(--label); font-size: 11px; letter-spacing: 0.04em; color: var(--muted); margin-top: 8px; }
+.credit a { text-underline-offset: 2px; }
+
+/* Contents */
+.contents { padding-block: 34px 10px; }
+.contents ol { list-style: none; margin: 14px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.contents li { border-bottom: 1px solid var(--rule); }
+.contents a {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: baseline;
+  padding-block: 14px; text-decoration: none;
+}
+.contents .t { font-family: var(--display); font-size: 25px; line-height: 1.15; font-weight: 500; }
+.contents .s { grid-column: 1; }
+.contents .m { grid-row: 1 / span 2; grid-column: 2; font-family: var(--label); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.contents a:hover .t { color: var(--accent); }
+
+/* Features */
+.feature { padding-top: 64px; }
+.feature .head { padding-bottom: 20px; }
+.feature h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 10vw, 54px); line-height: 1.02; margin: 12px 0 14px; text-wrap: balance; }
+.feature .stand { font-style: italic; font-size: 20px; line-height: 1.45; color: var(--muted); margin: 0; max-width: 36ch; }
+.feature figure { margin: 0; }
+.feature img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.feature .credit { padding-top: 0; }
+.prose { padding-top: 26px; max-width: 34em; }
+.prose p { margin: 0 0 1.05em; }
+.prose p:first-child::first-letter {
+  font-family: var(--display); font-weight: 600; float: left; font-size: 4.1em; line-height: 0.82;
+  padding: 0.07em 0.09em 0 0; color: var(--accent);
+}
+.further { font-family: var(--label); font-size: 12.5px; letter-spacing: 0.06em; color: var(--muted); margin-top: 6px; }
+.further a { color: var(--ink); text-underline-offset: 3px; }
+
+/* Reactions */
+.react { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.react .row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  font-family: var(--label); font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 10px 16px; min-height: 44px; cursor: pointer;
+}
+.btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn:hover { border-color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chips[hidden] { display: none; }
+.chip {
+  font-family: var(--label); font-size: 13px; background: var(--paper-2); border: 1px solid transparent;
+  border-radius: 999px; padding: 8px 13px; min-height: 40px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.react .hint { font-family: var(--label); font-size: 12px; color: var(--muted); margin: 10px 0 0; min-height: 1.4em; }
+
+/* Notebook */
+.notebook { margin-top: 72px; background: var(--paper-2); padding-block: 40px 44px; }
+.notebook h2, .trial h2, .editor h2 { font-family: var(--display); font-weight: 500; font-size: 38px; line-height: 1.05; margin: 10px 0 0; }
+.notebook dl { margin: 22px 0 0; display: grid; gap: 22px; }
+.notebook dt { font-family: var(--label); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.notebook dd { margin: 6px 0 0; max-width: 34em; }
+
+/* Sources on trial */
+.trial { padding-block: 56px 10px; }
+.trial > p, .editor > p { color: var(--muted); max-width: 34em; margin: 12px 0 0; }
+.sources { list-style: none; padding: 0; margin: 22px 0 0; border-top: 1px solid var(--rule); }
+.source { padding-block: 18px; border-bottom: 1px solid var(--rule); }
+.source .n { font-family: var(--display); font-size: 26px; font-weight: 500; line-height: 1.1; }
+.source .n a { text-decoration: none; }
+.source .n a:hover { color: var(--accent); }
+.source p { margin: 4px 0 12px; font-size: 16px; color: var(--muted); line-height: 1.5; }
+
+/* Note to the editor */
+.editor { padding-block: 46px 10px; }
+.editor form { margin-top: 18px; display: grid; gap: 12px; }
+.editor textarea {
+  width: 100%; min-height: 110px; resize: vertical; font: inherit; font-size: 17px; line-height: 1.5;
+  color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule); border-radius: 4px; padding: 14px;
+}
+.editor .btn { justify-self: start; }
+.editor .hint { font-family: var(--label); font-size: 12px; color: var(--muted); margin: 0; min-height: 1.4em; }
+
+/* End mark */
+.end { padding-block: 56px 80px; text-align: center; }
+.end .mark { font-family: var(--display); font-size: 34px; color: var(--accent); line-height: 1; }
+.end p { margin: 14px auto 0; max-width: 30em; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.end .label { display: block; margin-top: 8px; }
+
+@media (min-width: 700px) {
+  .cover img { aspect-ratio: 16 / 10; }
+  .feature .head, .prose, .react { padding-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="page">
+__MASTHEAD__
+__COVER__
+__CONTENTS__
+__FEATURES__
+__NOTEBOOK__
+__TRIAL__
+__EDITOR__
+__END__
+</div>
+
+<script>
+const ISSUE = __DATA__;
+(function () {
+  const LS = "longafternoon.v1";
+  const state = { reactions: {}, sources: {}, db: null };
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const meta = Object.fromEntries(ISSUE.articles.map(a => [a.id, a]));
+
+  function lsRead() { try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch (e) { return {}; } }
+  function lsWrite(o) { try { localStorage.setItem(LS, JSON.stringify(o)); } catch (e) {} }
+
+  function paint() {
+    $$("[data-article]").forEach(el => {
+      const id = el.dataset.article, r = state.reactions[id] || {};
+      $$("[data-act]", el).forEach(b => {
+        const a = b.dataset.act;
+        b.setAttribute("aria-pressed", String(a === "more" ? r.value === 1 : a === "less" ? r.value === -1 : !!r.saved));
+      });
+      const chips = $(".chips", el);
+      const show = r.value === 1 || r.value === -1;
+      chips.hidden = !show;
+      if (show) {
+        const key = r.value === 1 ? "more" : "less";
+        const labels = key === "more" ? meta[id].options.more : ISSUE.lessReasons;
+        if (chips.dataset.mode !== key) {
+          chips.dataset.mode = key;
+          chips.innerHTML = labels.map(l => '<button type="button" class="chip" data-reason="' + l.replace(/"/g, "&quot;") + '" aria-pressed="false"></button>').join("");
+          $$(".chip", chips).forEach((c, i) => c.textContent = labels[i]);
+        }
+        $$(".chip", chips).forEach(c => c.setAttribute("aria-pressed", String((r.reasons || []).includes(c.dataset.reason))));
+      } else { chips.dataset.mode = ""; }
+      const hint = $(".hint", el);
+      if (hint) hint.textContent = state.db ? (r.value || r.saved ? "Noted. Tomorrow's issue will reflect this." : "") : (r.value || r.saved ? "Noted on this device." : "");
+    });
+    $$("[data-source]").forEach(el => {
+      const s = state.sources[el.dataset.source] || {};
+      $$("[data-decide]", el).forEach(b => b.setAttribute("aria-pressed", String(s.status === b.dataset.decide)));
+    });
+  }
+
+  async function writeReaction(id, next) {
+    state.reactions[id] = next; paint();
+    const empty = !next.value && !next.saved;
+    if (state.db) {
+      try {
+        const ref = state.db.doc("reactions/" + id);
+        if (empty) await ref.delete(); else await ref.set(next);
+      } catch (e) { const h = $('[data-article="' + id + '"] .hint'); if (h) h.textContent = "Could not save that. Try again."; }
+    } else {
+      const o = lsRead(); o.reactions = Object.assign({}, state.reactions); lsWrite(o);
+    }
+  }
+
+  function react(id, patch) {
+    const cur = state.reactions[id] || {};
+    const a = meta[id];
+    const next = Object.assign({}, cur, patch, { section: a.section, title: a.title, issue: ISSUE.number, ts: Date.now() });
+    if (!next.reasons) next.reasons = [];
+    if (!next.value) { next.value = 0; next.reasons = []; }
+    writeReaction(id, next);
+  }
+
+  document.addEventListener("click", e => {
+    const link = e.target.closest("a[data-jump]");
+    if (link) { e.preventDefault(); const t = document.getElementById(link.dataset.jump); if (t) t.scrollIntoView(); return; }
+    const art = e.target.closest("[data-article]");
+    const b = e.target.closest("[data-act]");
+    if (art && b) {
+      const id = art.dataset.article, cur = state.reactions[id] || {}, a = b.dataset.act;
+      if (a === "more") react(id, { value: cur.value === 1 ? 0 : 1, reasons: cur.value === 1 ? [] : [] });
+      if (a === "less") react(id, { value: cur.value === -1 ? 0 : -1, reasons: [] });
+      if (a === "save") react(id, { saved: !cur.saved });
+      return;
+    }
+    const chip = e.target.closest(".chip");
+    if (chip && art) {
+      const id = art.dataset.article, cur = state.reactions[id] || {}, rs = (cur.reasons || []).slice(), r = chip.dataset.reason;
+      const i = rs.indexOf(r); if (i >= 0) rs.splice(i, 1); else rs.push(r);
+      react(id, { reasons: rs });
+      return;
+    }
+    const d = e.target.closest("[data-decide]");
+    if (d) {
+      const el = d.closest("[data-source]"), id = el.dataset.source, status = d.dataset.decide;
+      const cur = state.sources[id] || {};
+      const next = cur.status === status ? null : { status, name: el.dataset.name, ts: Date.now() };
+      if (next) state.sources[id] = next; else delete state.sources[id];
+      paint();
+      if (state.db) { const ref = state.db.doc("sources/" + id); (next ? ref.set(next) : ref.delete()).catch(() => {}); }
+      else { const o = lsRead(); o.sources = Object.assign({}, state.sources); lsWrite(o); }
+    }
+  });
+
+  const form = $("#note-form");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const ta = $("#note"), hint = $("#note-hint"), text = ta.value.trim();
+    if (!text) { hint.textContent = "Write a line first."; return; }
+    const doc = { text, ts: Date.now(), issue: ISSUE.number };
+    try {
+      if (state.db) { await state.db.collection("notes").add(doc); hint.textContent = "Sent to the editor. It will shape tomorrow's issue."; }
+      else { const o = lsRead(); (o.notes = o.notes || []).push(doc); lsWrite(o); hint.textContent = "Saved on this device only."; }
+      ta.value = "";
+    } catch (err) { hint.textContent = "Could not send that. Try again."; }
+  });
+
+  // Local fallback first, then upgrade to the shared store when it answers.
+  const saved = lsRead(); state.reactions = saved.reactions || {}; state.sources = saved.sources || {}; paint();
+  (async function () {
+    let db = null;
+    try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
+    if (!db) return;
+    state.db = db; state.reactions = {}; state.sources = {}; paint();
+    const onErr = () => { state.db = null; };
+    db.collection("reactions").onSnapshot(s => { state.reactions = {}; s.docs.forEach(d => state.reactions[d.id] = d.data()); paint(); }, onErr);
+    db.collection("sources").onSnapshot(s => { state.sources = {}; s.docs.forEach(d => state.sources[d.id] = d.data()); paint(); }, onErr);
+  })();
+})();
+</script>
