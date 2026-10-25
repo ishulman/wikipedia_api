@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap">
 <style>
-/* Layout: one finite column, like a phone-sized magazine. Cover, contents, four features with full-bleed photographs, a notebook page, sources on trial, an end mark. */
+/* Layout: one finite column, like a phone-sized magazine. Cover, contents, six picked articles with the publishers' own images and excerpts, sources on trial, an end mark. */
 :root {
   --paper: #E8EBE6;
   --paper-2: #DDE2DC;
@@ -91,18 +91,14 @@ button { font: inherit; color: inherit; }
 .feature { padding-top: 64px; }
 .feature .head { padding-bottom: 20px; }
 .feature h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 10vw, 54px); line-height: 1.02; margin: 12px 0 14px; text-wrap: balance; }
-.feature .stand { font-style: italic; font-size: 20px; line-height: 1.45; color: var(--muted); margin: 0; max-width: 36ch; }
+.feature .by { font-family: var(--label); font-size: 13px; letter-spacing: 0.04em; color: var(--muted); margin: 0; }
 .feature figure { margin: 0; }
 .feature img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .feature .credit { padding-top: 0; }
-.prose { padding-top: 26px; max-width: 34em; }
-.prose p { margin: 0 0 1.05em; }
-.prose p:first-child::first-letter {
-  font-family: var(--display); font-weight: 600; float: left; font-size: 4.1em; line-height: 0.82;
-  padding: 0.07em 0.09em 0 0; color: var(--accent);
-}
-.further { font-family: var(--label); font-size: 12.5px; letter-spacing: 0.06em; color: var(--muted); margin-top: 6px; }
-.further a { color: var(--ink); text-underline-offset: 3px; }
+.excerpt { margin: 24px 0 0; max-width: 34em; font-size: 19px; line-height: 1.6; font-style: italic; }
+.readon { margin: 16px 0 0; }
+.go { font-family: var(--label); font-weight: 500; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px; color: var(--ink); }
+.go:hover { color: var(--accent); }
 
 /* Reactions */
 .react { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--rule); }
@@ -121,13 +117,6 @@ button { font: inherit; color: inherit; }
 }
 .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
 .react .hint { font-family: var(--label); font-size: 12px; color: var(--muted); margin: 10px 0 0; min-height: 1.4em; }
-
-/* Notebook */
-.notebook { margin-top: 72px; background: var(--paper-2); padding-block: 40px 44px; }
-.notebook h2, .trial h2, .editor h2 { font-family: var(--display); font-weight: 500; font-size: 38px; line-height: 1.05; margin: 10px 0 0; }
-.notebook dl { margin: 22px 0 0; display: grid; gap: 22px; }
-.notebook dt { font-family: var(--label); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
-.notebook dd { margin: 6px 0 0; max-width: 34em; }
 
 /* Sources on trial */
 .trial { padding-block: 56px 10px; }
@@ -157,7 +146,7 @@ button { font: inherit; color: inherit; }
 
 @media (min-width: 700px) {
   .cover img { aspect-ratio: 16 / 10; }
-  .feature .head, .prose, .react { padding-left: 0; }
+  
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 html { scroll-behavior: smooth; }
@@ -168,7 +157,6 @@ __MASTHEAD__
 __COVER__
 __CONTENTS__
 __FEATURES__
-__NOTEBOOK__
 __TRIAL__
 __EDITOR__
 __END__
